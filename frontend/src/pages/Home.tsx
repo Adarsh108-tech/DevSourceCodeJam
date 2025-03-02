@@ -1,38 +1,48 @@
 import React from "react";
-import Navbar from "../components/Navbar.jsx";
+import Navbar from "../components/Navbar";
 
 const Home = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-black min-h-screen text-white">
       <Navbar />
-      <header className="text-center py-16 bg-blue-500 text-white">
-        <h1 className="text-4xl font-bold">Welcome to DevSource Social</h1>
-        <p className="mt-4 text-lg">Connect, Share, and Collaborate with Developers</p>
+
+      {/* Hero Section */}
+      <header className="relative h-screen flex items-center justify-center text-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 opacity-20 blur-xl"></div>
+        <div className="relative z-10">
+          <h1 className="text-5xl font-extrabold neon-text tracking-wide">Welcome to DevSource Social</h1>
+          <p className="mt-4 text-lg text-gray-300">Connect, Innovate, and Showcase Your Tech</p>
+        </div>
       </header>
 
-      <main className="max-w-6xl mx-auto p-6">
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold">Explore Features</h2>
-          <p className="text-gray-700 mt-2">Discover new projects, chat with developers, and join live seminars.</p>
-        </section>
-
-        <section className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 shadow-md rounded-lg">
-            <h3 className="text-xl font-semibold">Messages & Chats</h3>
-            <p className="text-gray-600">Connect with fellow developers and share knowledge.</p>
-          </div>
-          <div className="bg-white p-6 shadow-md rounded-lg">
-            <h3 className="text-xl font-semibold">Live Seminars</h3>
-            <p className="text-gray-600">Join live discussions and tech webinars.</p>
-          </div>
-          <div className="bg-white p-6 shadow-md rounded-lg">
-            <h3 className="text-xl font-semibold">Showcase Projects</h3>
-            <p className="text-gray-600">Show your work and get recognized in the community.</p>
-          </div>
+      {/* Features Section */}
+      <main className="max-w-6xl mx-auto px-6 py-12">
+        <h2 className="text-center text-3xl font-semibold mb-8 neon-text">Explore Features</h2>
+        <section className="grid md:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div key={index} className="glassmorphism-card">
+              <h3 className="text-2xl font-semibold">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
+            </div>
+          ))}
         </section>
       </main>
+
+      {/* Footer */}
+      <footer className="text-center py-6 border-t border-gray-700">
+        <p className="text-gray-400">&copy; 2025 DevSource. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
+
+const features = [
+  { title: "💬 Messages & Chats", description: "Instantly connect with developers worldwide." },
+  { title: "🎤 Live Seminars", description: "Attend and host live coding sessions." },
+  { title: "🚀 Showcase Projects", description: "Share your work and gain recognition." },
+  { title: "🔍 Search & Discover", description: "Find developers, projects, and more." },
+  { title: "👤 Profile Customization", description: "Create your tech portfolio." },
+  { title: "🔒 Secure Login", description: "Sign up with robust authentication." }
+];
 
 export default Home;
