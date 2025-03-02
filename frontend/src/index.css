@@ -1,42 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Futuristic Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+}
+
 /* Neon Glow Text */
 .neon-text {
-    text-shadow: 0 0 2px #fff, 0 0 5px #00d9ff, 0 0 10px #00d9ff, 0 0 15px #00d9ff;
+    text-shadow: 0 0 8px #0ff, 0 0 16px #00d9ff, 0 0 32px #00d9ff;
+    color: #00f7ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
-  
+
 /* Glassmorphism Cards */
 .glassmorphism-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
     padding: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     transition: transform 0.3s ease-in-out;
 }
-  
+
 .glassmorphism-card:hover {
-    transform: scale(1.05);
-    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.08);
+    border-color: rgba(0, 255, 255, 0.6);
 }
-.neon-text {
-    text-shadow: 0 0 5px #fff, 0 0 10px #00d9ff, 0 0 15px #00d9ff, 0 0 20px #00d9ff;
+
+/* Cyberpunk Heading */
+.cyberpunk-heading {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #00d9ff, 0 0 40px #00d9ff;
+    color: #0ff;
+    letter-spacing: 3px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #00d9ff;
 }
-  
-  /* Transparent Glassmorphism Navbar */
-nav {
-    position: fixed;
-    width: 100%;
-    z-index: 50;
+
+/* Futuristic List Styling */
+.futuristic-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: #00f7ff;
 }
-  
-  /* Particle Background */
-.particle-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+
+.futuristic-list li::before {
+    content: "⚡";
+    color: #00f7ff;
+    font-size: 1.5rem;
 }
