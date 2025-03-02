@@ -10,7 +10,7 @@ const Home = () => {
       <header className="relative h-screen flex items-center justify-center text-center">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 opacity-20 blur-xl"></div>
         <div className="relative z-10">
-          <h1 className="text-5xl font-extrabold neon-text tracking-wide">Welcome to DevSource Social</h1>
+          <h1 className="text-5xl font-extrabold neon-text tracking-wide">Welcome to DevSource 🔥</h1>
           <p className="mt-4 text-lg text-gray-300">Connect, Innovate, and Showcase Your Tech</p>
         </div>
       </header>
