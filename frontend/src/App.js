@@ -1,13 +1,15 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LandingPage from "./pages/LandingPage.tsx";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import { useState } from "react";
-import Home from "./pages/Home.tsx";
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
 function App() {
-  const [Authented , setAuthented] = useState(false);
+  const [Authenticate , setAuthentication] = useState(false);
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Navigate replace to="/home" />} /> 
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );
