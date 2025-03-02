@@ -1,6 +1,6 @@
 
 import { Route ,  BrowserRouter as Router , Routes } from "react-router-dom";
-import Land from "./pages/LandingPage";
+import LandingPage from "./pages/LandingPage";
 import { useState } from "react";
 import Home from "./pages/Home";
 function App() {
